@@ -1,0 +1,30 @@
+site_name: My Project Documentation
+site_url: https://moeedibm.github.io/mkdocs-test
+repo_url: https://github.com/MoeedIBM/mkdocs-test
+edit_uri: edit/main/docs
+
+nav:
+  - Home: index.md
+  - Python Scripts:
+      - test_pyscript.py: test_pyscript.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - test_pyscript.py
+          options:
+            docstring_style: google
+            show_source: false
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - toc.integrate
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
