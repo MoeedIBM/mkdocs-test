@@ -19,5 +19,5 @@ jobs:
         run: | 
             mkdocs gh-deploy --force
         env: 
-            GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+            GH_TOKEN: ${{ secrets.PAT_TOKEN }} # token
       
